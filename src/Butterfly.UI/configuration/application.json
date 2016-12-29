@@ -1,0 +1,52 @@
+﻿{
+  "routing": [
+    {
+      "key": "default",
+      "value": "dev/index.html"
+    }
+  ],
+  "resource": [
+    {
+      "key": "js",
+      "value": "application/x-javascript"
+    },
+    {
+      "key": "css",
+      "value": "text/css"
+    },
+    {
+      "key": "html",
+      "value": "text/html"
+    },
+    {
+      "key": "woff",
+      "value": "application/font-woff"
+    },
+    {
+      "key": "jpg",
+      "value": "image/jpeg"
+    }
+  ],
+  "rewrite": [
+    {
+      "pattern": "^dev/page",
+      "value": "",
+      "mode": "override"
+    },
+    {
+      "pattern": "^dev/article",
+      "value": "",
+      "mode": "override"
+    },
+    {
+      "pattern": "^dev/editor",
+      "value": "",
+      "mode": "override"
+    },
+    {
+      "pattern": "^dev/as",
+      "value": "as",
+      "mode": "replace"
+    }
+  ]
+}
