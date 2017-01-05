@@ -24,9 +24,14 @@ namespace Butterfly.Cache
 
         public void Initialize()
         {
-            if (!Folder.HasValue() || !Folder.IsFolder())
+            if (!Folder.HasValue())
             {
-                throw new Exception(string.Format("folder '{0}' is not valid.", Folder));
+                throw new Exception(string.Format("folder '{0}' is empty.", Folder));
+            }
+
+            if (!Folder.IsFolder())
+            {
+                Directory.CreateDirectory(Folder);
             }
 
             foreach (var fileInfo in new DirectoryInfo(Folder).GetFiles("*.json"))

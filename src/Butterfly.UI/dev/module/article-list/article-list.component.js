@@ -13,7 +13,7 @@
             //$location.hash('pageTop');
             //$anchorScroll();
 
-            $http.get('/as/gabp?pn=' + pageNumber, {
+            $http.get('as/gabp?pn=' + pageNumber, {
                 headers: {
                     'Content-Type': 'application/json',
                     'ACCEPT': 'application/json'

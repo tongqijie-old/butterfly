@@ -5,7 +5,7 @@ angular.module('articleDetail').component('articleDetail', {
       function ArticleDetailController($routeParams, $http, $sce, $scope) {
           var self = this;
 
-          $http.get('/as/gabi?id=' + $routeParams.articleId)
+          $http.get('as/gabi?id=' + $routeParams.articleId)
               .then(function (response) {
                   if (response.status == 200) {
                       if (response.data.error == undefined || response.data.error == false) {

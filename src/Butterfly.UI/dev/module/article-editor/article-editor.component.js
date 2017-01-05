@@ -10,7 +10,7 @@
 
                 var action = ($scope.article.id != undefined && $scope.article.id.length > 0) ? 'modify' : 'create';
 
-                $http.post('/as/oa?action=' + action + '&key=' + $scope.apiKey, {
+                $http.post('as/oa?action=' + action + '&key=' + $scope.apiKey, {
                     'id': $scope.article.id,
                     'title': $scope.article.title,
                     'abstract': $scope.article.abstract,
@@ -60,7 +60,7 @@
                 return;
             }
 
-            $http.get('/as/gabi?id=' + articleId)
+            $http.get('as/gabi?id=' + articleId)
               .then(function (response) {
                   if (response.status == 200) {
                       if (response.data.error == undefined || response.data.error == false) {
